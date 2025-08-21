@@ -53,6 +53,9 @@ CREATE TABLE Productos (
     CONSTRAINT fk_Productos_Usuario FOREIGN KEY (idUsuarioRegistro) REFERENCES Usuario(idUsuario)
 );
 
+Alter table Productos
+Add (IMAGEN_URL VARCHAR(120) NULL);
+
 -- Triggers para autoincrementar las llaves primarias usando las secuencias
 CREATE OR REPLACE TRIGGER trg_TipoUsuario
 BEFORE INSERT ON TipoUsuario
